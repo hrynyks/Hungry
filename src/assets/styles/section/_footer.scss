@@ -1,0 +1,115 @@
+.footer {
+    padding: 100px 0;
+    background-color: $main-color;
+
+    &-wrap {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+
+        @include a (tablet-xl) {
+            grid-template-columns: repeat(2, 300px);
+            gap: 40px;
+            place-items: center;
+            justify-content: center;
+        }
+
+        @include a (tablet) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-item {
+
+        @include a (tablet) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &-1 {
+            @include a (tablet-xl) {
+                order: -2;
+            }
+        }
+
+        &-4 {
+            @include a (tablet-xl) {
+                order: -2;
+            }
+        }
+    }
+
+    &__logo {
+        margin-bottom: 35px;
+    }
+
+    &__descr {
+        line-height: 150%;
+        color: rgba($color: $light-color, $alpha: 0.7);
+
+        @include a (mobile) {
+            text-align: center;
+            line-height: 20px;
+        }
+    }
+
+    &__title {
+        font-size: toRem(21);
+        font-weight: 500;
+        color: $light-color;
+        margin-bottom: 35px;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        @include a (tablet) {
+            text-align: center;
+        }
+    }
+
+    &__item {
+        &-link {
+            color: rgba($color: $light-color, $alpha: 0.7);
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+
+    &__form {
+        display: flex;
+        margin-bottom: 32px;
+        max-width: 360px;
+        width: 100%;
+
+        @include a (mobile) {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+
+    &__input {
+        border-color: $light-color;
+        padding: 10px;
+        width: 229px;
+
+        &::placeholder {
+            font-size: toRem(14);
+            color: rgba($color: $main-color, $alpha: 0.7);
+        }
+    }
+
+    &__btn {
+        font-size: toRem(14);
+        color: $light-color;
+        width: 131px;
+        line-height: 41px;
+        background-color: $accent-color;
+        text-align: center;
+    }
+}

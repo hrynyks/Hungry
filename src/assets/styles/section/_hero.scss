@@ -1,0 +1,86 @@
+.hero {
+    padding: 167px 0 102px;
+    background-color: $accent-color;
+
+    @include a (mobile) {
+        padding-top: 200px;
+    }
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 100px;
+    }
+
+    &__content {
+        max-width: 500px;
+        width: 100%;
+
+        @include a (tablet) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+        }
+    }
+
+    &__title {
+        font-family: 'Work Sans', sans-serif;
+        font-size: toRem(51);
+        line-height: 130%;
+        color: $light-color;
+        margin-bottom: 30px;
+
+        @include a (tablet) {
+            text-align: center;
+        }
+    }
+
+    &__descr {
+        font-size: toRem(20);
+        line-height: 150%;
+        color: $light-color;
+        margin-bottom: 50px;
+
+        @include a (tablet) {
+            text-align: center;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__image {
+        position: relative;
+
+        @include a (tablet) {
+            display: none;
+        }
+    }
+
+    &__img {
+        &-left {
+            position: absolute;
+            bottom: -75px;
+            left: -75px;
+
+            @include a (laptop) {
+                display: none;
+            }
+        }
+
+        &-right {
+            position: absolute;
+            top: -50px;
+            right: -75px;
+
+            @include a (laptop) {
+                display: none;
+            }
+        }
+    }
+}

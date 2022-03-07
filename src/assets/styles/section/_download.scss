@@ -1,0 +1,36 @@
+.download {
+    padding: 107px 0;
+    background-color: $accent-color;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include a (tablet) {
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+
+    &__title {
+        font-size: toRem(38);
+        color: $light-color;
+    }
+
+    &__btn {
+        font-size: toRem(18);
+        font-weight: 600;
+        color: $accent-color;
+        width: 223px;
+        line-height: 62px;
+        text-align: center;
+        border-radius: 10px;
+        background-color: $light-color;
+
+        &:hover {
+            background-color: $main-color;
+            color: $accent-color;
+        }
+    }
+}
